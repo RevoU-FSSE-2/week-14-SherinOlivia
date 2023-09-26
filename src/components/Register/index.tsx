@@ -2,7 +2,6 @@ import { SmileOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Card, Col, Row, Input, Form as AntForm } from 'antd';
 import { Formik, Form, Field, ErrorMessage,  } from 'formik';
 import * as Yup from 'yup'
-import { TextLevel } from '../../components';
 import styles from './Register.module.css'
 import { RegisterInfo } from '../../types';
 
@@ -34,13 +33,12 @@ const validationSchema = Yup.object().shape({
         <Row className={styles.wrapper}>
             <Col span={8}></Col>
             <Col span={8} className={styles.body}>
-                <Card className={styles.card}>
+                <Card title={"Register"} className={styles.card}>
                     <Formik 
                     initialValues = {{name: "", email: "", password: ""}}
                     validationSchema={validationSchema}
                     onSubmit={handleRegister}>
                         <Form name="basic" autoComplete="off">
-                            <TextLevel level={3} content={"Register"}/>
                     
                             <AntForm.Item label="Name">
                             <Field prefix={<SmileOutlined className="site-form-item-icon" />} 

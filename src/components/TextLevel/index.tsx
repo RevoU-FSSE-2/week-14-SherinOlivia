@@ -5,22 +5,22 @@ const { Title } = Typography;
 
 interface Props {
     level: number;
-    content: string;
+    title: string;
 }
 
-const TextLevel: React.FC<Props> = ({ level, content }) => {
+const TextLevel: React.FC<Props> = ({ level, title }) => {
   let textComponent = null;
 
   if (level === 1) {
-    textComponent = <Title level={1}>{content}</Title>;
+    textComponent = <Title level={1}>{title}</Title>;
   } else if (level === 2) {
-    textComponent = <Title level={2}>{content}</Title>;
+    textComponent = <Title level={2}>{title}</Title>;
   } else if (level === 3) {
-    textComponent = <Title level={3}>{content}</Title>;
+    textComponent = <Title level={3}>{title}</Title>;
   } else if (level === 4) {
-    textComponent = <Title level={4}>{content}</Title>;
+    textComponent = <Title level={4}>{title}</Title>;
   } else if (level === 5) {
-    textComponent = <Title level={5}>{content}</Title>;
+    textComponent = <Title level={5}>{title}</Title>;
   }
 
   return textComponent;
