@@ -13,7 +13,6 @@ function App() {
         <Route path='/' element={<CategoryList />} />
         <Route path='/add' element={<CreateNew />} />
         <Route path='/edit/:id' element={<UpdateCategory />} />
-        {/* <Route path='/coba' element={<CategoryRetry />} /> */}
       </Routes>
     </BrowserRouter>
   )
