@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage,  } from 'formik';
 import * as Yup from 'yup'
 import styles from './Register.module.css'
 import { RegisterInfo } from '../../types';
+import { Link } from 'react-router-dom';
 
 interface Props {
     onSubmit: (values: RegisterInfo) => void
@@ -41,36 +42,45 @@ const validationSchema = Yup.object().shape({
                         <Form name="basic" autoComplete="off">
                     
                             <AntForm.Item label="Name">
-                            <Field prefix={<SmileOutlined className="site-form-item-icon" />} 
-                            name="name" as={Input} placeholder="Enter Your Name" />
-                            
-                            <div className={styles.error}>
-                                <ErrorMessage name="name" />
-                            </div>
+                                <div>
+                                    <Field prefix={<SmileOutlined className="site-form-item-icon" />} 
+                                    name="name" as={Input} placeholder="Enter Your Name" />
+                                    
+                                    <div className={styles.error}>
+                                        <ErrorMessage name="name" />
+                                    </div>
+                                </div>
                             </AntForm.Item>
                     
                             <AntForm.Item label="Email" name="email">
-                            <Field prefix={<UserOutlined className="site-form-item-icon" />} 
-                            name="email" as={Input} placeholder="Enter Your Email" />
-                            
-                            <div className={styles.error}>
-                                <ErrorMessage name="email" />
-                            </div>
+                                <div>
+                                    <Field prefix={<UserOutlined className="site-form-item-icon" />} 
+                                    name="email" as={Input} placeholder="Enter Your Email" />
+                                    
+                                    <div className={styles.error}>
+                                        <ErrorMessage name="email" />
+                                    </div>
+                                </div>
                             </AntForm.Item>
                         
                             <AntForm.Item label="Password" name="password">
-                            <Field prefix={<LockOutlined className="site-form-item-icon" />} 
-                            name="password" as={Input} placeholder="Enter Your Password" />
+                                <div>
+                                    <Field prefix={<LockOutlined className="site-form-item-icon" />} 
+                                    name="password" as={Input} placeholder="Enter Your Password" />
 
-                            <div className={styles.error}>
-                                <ErrorMessage name="password" />
-                            </div>
+                                    <div className={styles.error}>
+                                        <ErrorMessage name="password" />
+                                    </div>
+                                </div>
                             </AntForm.Item>
                         
                             <AntForm.Item wrapperCol={{ offset: 8, span: 16 }}>
-                            <Button type="primary" htmlType="submit">
-                                Register
-                            </Button>
+                                <div>
+                                    <Button type="primary" htmlType="submit" >
+                                    register
+                                    </Button>
+                                    <Link to={'/login'} className={styles.link}>Back</Link>
+                                </div>
                             </AntForm.Item>
                         </Form>
                     </Formik>
