@@ -5,7 +5,7 @@
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 10vw 0;
+    padding: 25vh 25vw;
 }
 
 .body {
@@ -15,4 +15,8 @@
 .card {
     min-height: 5vh;
     min-width: 50vw;
+}
+
+.link {
+    text-decoration: underline;
 }

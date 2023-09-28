@@ -59,10 +59,10 @@ const Login = ({ onSubmit }: Props) => {
                 
                     <AntForm.Item wrapperCol={{ offset: 8, span: 16 }}>
                         <div>
-                            <Button type="primary" htmlType="submit" className="login-form-button">
+                            <Button type="primary" htmlType="submit">
                             Log in
                             </Button>
-                            Or <Link to={'/register'}>register now!</Link>
+                            Or <Link to={'/register'} className={styles.link}>register now!</Link>
                         </div>
                     </AntForm.Item>
                 </Form>
