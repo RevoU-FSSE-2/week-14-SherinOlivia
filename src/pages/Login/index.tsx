@@ -7,10 +7,10 @@ const Login = () => {
 
   const handleLogin = async (values: LoginInfo) => {
     console.log(`Successfully logged in`, values)
-    const apiUrl = import.meta.env.VITE_REACT_APP_LOGIN_URL;
+    const apiUrl = import.meta.env.VITE_REACT_APP_BASE_USER_URL;
 
     try {
-        const response = await fetch (apiUrl, {
+        const response = await fetch (`${apiUrl}login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

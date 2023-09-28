@@ -3,11 +3,12 @@ import { CategoryInfo, CategoryFormInfo as UpdateInfo } from "../../types";
 import { CategoryForm as CategoryUpdateComponent } from "../../components";
 import { useCallback, useEffect, useState } from "react";
 
-const apiUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
 
 const UpdateCategory = () => {
     const navigate = useNavigate()
     const [categories, setCategories] = useState<CategoryInfo>()
+    const apiUrl = import.meta.env.VITE_REACT_APP_BASE_CATEGORY_URL;
+    const token = localStorage.getItem('authToken')
     const { id } = useParams()
 
     const getCategory = useCallback(
@@ -16,7 +17,7 @@ const UpdateCategory = () => {
                 const fetchUpdate = await fetch(`${apiUrl}`, {
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Bearer ${localStorage.getItem('authToken')}`
+                        Authorization: `Bearer ${token}`
                     },
 
                 });
@@ -48,7 +49,7 @@ const UpdateCategory = () => {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('authToken')}`
+                    Authorization: `Bearer ${token}`
                 },
                 body: JSON.stringify({ ...values, id:id })
             })

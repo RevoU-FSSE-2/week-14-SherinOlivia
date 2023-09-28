@@ -7,7 +7,7 @@ const CreateNew = () => {
     const navigate = useNavigate()
 
     const handleCreate = async (values: CreateInfo) => {
-        const apiUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+        const apiUrl = import.meta.env.VITE_REACT_APP_BASE_CATEGORY_URL;
       
         try {
             const response = await fetch (`${apiUrl}create`, {

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Button, Table } from 'antd';
+import { Button } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
 import { useNavigate } from 'react-router-dom';
-import { TextLevel } from '../../components'
+import { TextLevel, CategoryList as CategoryListComponent } from '../../components'
 import styles from './CategoryList.module.css'
 
 export interface CategoryInfo {
@@ -14,8 +14,8 @@ export interface CategoryInfo {
 const CategoryList: React.FC = () => {
   const [categories, setCategories] = useState<CategoryInfo[]>([]);
   const navigate = useNavigate();
-
-  const apiUrl = 'https://mock-api.arikmpt.com/api/category';
+  const token = localStorage.getItem('authToken');
+  const apiUrl = import.meta.env.VITE_REACT_APP_BASE_CATEGORY_URL;
 
 const handleLogOut = () => {
   localStorage.removeItem('authToken')
@@ -24,7 +24,7 @@ const handleLogOut = () => {
 
 const getCategory = useCallback(
    async () => {
-  const token = localStorage.getItem('authToken');
+
   if(!token){
     navigate('/login')
     return
@@ -34,7 +34,7 @@ const getCategory = useCallback(
   try {
     const response = await fetch(apiUrl, {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('authToken')}`
+        Authorization: `Bearer ${token}`
       },
     });
     const data = await response.json();
@@ -60,7 +60,6 @@ useEffect(() => {
 
   // remove/delete item
   const removeCategory = async (id: string) => {
-    const apiUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
     try {
         const response = await fetch(`${apiUrl}${id}`, {
           method: 'DELETE',
@@ -105,7 +104,7 @@ useEffect(() => {
       key: 'action',
       render: (_, record) => (
         <>
-          <Button type='primary' onClick={() => navigate(`/edit/${record.id}`)}>Edit</Button>
+          <Button type='primary' onClick={() => navigate(`/edit/${record.id}`)} className={styles.actionButton}>Edit</Button>
           <Button type='primary' onClick={() => removeCategory(record.id)} htmlType="button" danger>Delete</Button>
         </>
       ),
@@ -117,13 +116,18 @@ useEffect(() => {
     <>
     <div className={styles.categoryList}>
       <div className={styles.categoryTitle}>
-      <span><Button type={'primary'} onClick={() => navigate('/add')}>Create New</Button></span>
-        <TextLevel level={1} content={"List of Category"} />
-        <span className={styles.logout}><Button type={'primary'} onClick={handleLogOut} danger>Log Out</Button></span>
+        <span><Button type={'primary'} onClick={() => navigate('/add')}>Create New</Button></span>
+
+        <TextLevel level={1} title={"List of Category"} />
+
+        <div>
+          <Button type={'primary'} onClick={() => navigate('/profile')} className={styles.userButton}>Profile</Button>
+          <Button type={'primary'} onClick={handleLogOut} className={styles.logout} danger>Log Out</Button>
+        </div>
       </div>
-      <Table 
+      <CategoryListComponent
       columns={columns} 
-      dataSource={categories || []}
+      data={categories || []}
       />
     </div>
     </>
