@@ -4,12 +4,8 @@
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 10vw 0;
-}
-
-.body {
-    grid-column: 1 / span 3;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 25vh 25vw;
 }
 
 .card {

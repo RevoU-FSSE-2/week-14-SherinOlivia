@@ -29,7 +29,7 @@ const CategoryForm = ({onSubmit, category, content}: Props) => {
     return (
         <Row className={styles.wrapper}>
         <Col span={8}></Col>
-        <Col span={8} className={styles.body}>
+        <Col span={8}>
             <Card className={styles.card}>
                 <Formik 
                 initialValues={category ?? initialValues}

@@ -5,7 +5,7 @@ import { ProfileInfo } from '../../types';
 import styles from './Profile.module.css'
 
 const Profile: React.FC<ProfileInfo> = ({name, email}) => (
-
+<div className={styles.profilePage}>
     <Card title="Profile" bordered={false} className={styles.profile}>
         <p>Name: <span className={styles.profileData}>{name}</span></p>
         <p >Email: <span className={styles.profileData}>{email}</span></p>
@@ -13,6 +13,7 @@ const Profile: React.FC<ProfileInfo> = ({name, email}) => (
         <div className={styles.profileBody}></div>
 
     </Card>
+</div>
 
 );
 
