@@ -38,8 +38,8 @@ const CategoryForm = ({onSubmit, category, content}: Props) => {
                     {(formikProps) => (
                     <Form name="basic" autoComplete="off" >
                         <div className={styles.middle}>
-                            <TextLevel level={3} content={content} />
-                            <Link to={'/'} >Back</Link>
+                            <TextLevel level={3} title={content} />
+                            <Link to={'/'} className={styles.link}>Back</Link>
                         </div>
 
 
@@ -56,7 +56,7 @@ const CategoryForm = ({onSubmit, category, content}: Props) => {
 
                         <AntForm.Item label="Status" name="is_active">
                             <div>
-                                <Select placeholder="Select Status"   onChange={(value) => {
+                                <Select placeholder="Select Status" onChange={(value) => {
                                 formikProps.setFieldValue("is_active", value);
                                 }} 
                                 value={formikProps.values.is_active}

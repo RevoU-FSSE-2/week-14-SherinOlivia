@@ -25,6 +25,10 @@
     padding-bottom: 2vh;
 }
 
+.link {
+    text-decoration: underline;
+}
+
 .button {
     padding: 0 25%;
 }
