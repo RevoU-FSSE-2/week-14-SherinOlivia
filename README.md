@@ -26,13 +26,18 @@
 - Category List
 <br>
 
-## Deployed link: 
-<p align="center">
-<a href=x>x</a>||
-<a href=x>x</a>
-</p> 
-<br>
-
+## Tested Features:
+1. Components:
+- Register Form
+![Register-Component]()
+- Login Form
+![Login-Component]()
+- Category List
+![CategoryList-Component]()
+- Category Form (Create New & Update)
+![CategoryForm-Component]()
+- Profile
+![Profile-Component]()
 ## How to Run the App
 
 For testing purposes, please access the deployed link above (both links lead to the same site)
