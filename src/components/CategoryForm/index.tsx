@@ -59,7 +59,7 @@ const CategoryForm = ({onSubmit, category, content}: Props) => {
                                 <Select placeholder="Select Status" onChange={(value) => {
                                 formikProps.setFieldValue("is_active", value);
                                 }} 
-                                value={formikProps.values.is_active}
+                                value={formikProps.values.is_active || undefined}
                                 >
                                 <Select.Option value="true">Active</Select.Option>
                                 <Select.Option value="false">Deactive</Select.Option>
