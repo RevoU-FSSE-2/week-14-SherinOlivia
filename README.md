@@ -29,15 +29,15 @@
 ## Tested Features:
 1. Components:
 - Register Form
-![Register-Component]()
+![Register-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/RegisterComponentTest.png?raw=true)
 - Login Form
-![Login-Component]()
+![Login-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/LoginComponentTest.png?raw=true)
 - Category List
-![CategoryList-Component]()
+![CategoryList-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/CategoryListComponentTest.png?raw=true)
 - Category Form (Create New & Update)
-![CategoryForm-Component]()
+![CategoryForm-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/CategoryFormTest.png?raw=true)
 - Profile
-![Profile-Component]()
+![Profile-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/ProfileComponentTest.png?raw=true)
 ## How to Run the App
 
 For testing purposes, please access the deployed link above (both links lead to the same site)
