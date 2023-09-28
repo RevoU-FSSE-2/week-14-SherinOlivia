@@ -4,16 +4,11 @@ export interface RegisterInfo {
     password: string;
 }
 
+export type ProfileInfo = Omit<RegisterInfo, 'password'>
 export interface LoginInfo {
     email: string;
     password: string;
 }
-
-// export interface LoginResponse {
-//     name: string;
-//     email: string;
-//     token: string;
-// }
 export interface CategoryInfo {
     id: string;
     name: string;
