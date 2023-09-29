@@ -11,7 +11,7 @@ const user = {
 describe('Test Profile Page Component', () => {
     it('Profile Title Renders Correctly',async () => {
         render(<BrowserRouter> <Profile name={user.name} email={user.email} /> </BrowserRouter>)
-        const title = screen.getByText('Profile')
+        const title = screen.getByText('Profile Page')
         expect(title).toBeDefined()       
     })
 
@@ -38,3 +38,5 @@ describe('Test Profile Page Component', () => {
         });
     });
 })
+
+// pnpm run test 'src/components/Profile/Profile.test.tsx'
