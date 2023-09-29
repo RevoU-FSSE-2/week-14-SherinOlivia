@@ -7,10 +7,9 @@ const Login = () => {
 
   const handleLogin = async (values: LoginInfo) => {
     console.log(`Successfully logged in`, values)
-    const apiUrl = import.meta.env.VITE_REACT_APP_BASE_USER_URL;
 
     try {
-        const response = await fetch (`${apiUrl}login`, {
+        const response = await fetch (`https://mock-api.arikmpt.com/api/user/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
