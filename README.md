@@ -29,15 +29,21 @@
 ## Tested Features:
 1. Components:
 - Register Form
-![Register-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/RegisterComponentTest.png?raw=true)
+![Register-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/RegisterComponentTest.webp)
 - Login Form
-![Login-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/LoginComponentTest.png?raw=true)
+![Login-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/LoginComponentTest.webp)
 - Category List
-![CategoryList-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/CategoryListComponentTest.png?raw=true)
+![CategoryList-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/CategoryListComponentTest.webp)
 - Category Form (Create New & Update)
-![CategoryForm-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/CategoryFormTest.png?raw=true)
+![CategoryForm-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/CategoryFormTest.webp)
 - Profile
-![Profile-Component](https://github.com/RevoU-FSSE-2/week-14-SherinOlivia/blob/main/src/assets/ProfileComponentTest.png?raw=true)
+![Profile-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/ProfileComponentTest.webp)
+
+2. Pages
+- Register Page
+![Register-Page](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/RegisterPageTest.webp)
+- Login Page
+![Login-Page](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/LoginPageTest.webp)
 ## How to Run the App
 
 For testing purposes, please access the deployed link above (both links lead to the same site)
