@@ -34,7 +34,7 @@
 ![Login-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/LoginComponentTest.webp)
 - Category List
 ![CategoryList-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/CategoryListComponentTest.webp)
-- Category Form (Create New & Update)
+- Category Form (Component for Create New & Update Pages)
 ![CategoryForm-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/CategoryFormTest.webp)
 - Profile
 ![Profile-Component](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/ProfileComponentTest.webp)
@@ -44,9 +44,19 @@
 ![Register-Page](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/RegisterPageTest.webp)
 - Login Page
 ![Login-Page](https://raw.githubusercontent.com/RevoU-FSSE-2/week-14-SherinOlivia/main/src/assets/LoginPageTest.webp)
+
+<br>
+
+## Deployed link (New Feature: Profile Page): 
+<p align="center">
+<a href="https://w14sh-updated-react-forms.netlify.app/">w14sh-updated-react-forms.netlify.app</a>||
+<a href="https://w14sh-updated-react-forms.roozone.site/">w14sh-updated-react-forms.roozone.site</a>
+</p> 
+<br>
+
 ## How to Run the App
 
-For testing purposes, please access the deployed link above (both links lead to the same site)
+For checcking/inspecting purposes, please access the deployed link above (both links lead to the same site)
 
 Otherwise:
 - git clone or download this repository to your machine
