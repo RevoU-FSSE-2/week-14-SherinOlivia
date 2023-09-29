@@ -7,10 +7,9 @@ import { Register as RegisterForm } from '../../components';
 
       const handleRegister = async (values: RegisterInfo) => {
         console.log(`Successfully Registered..!`, values)
-        const apiUrl = import.meta.env.VITE_REACT_APP_BASE_USER_URL
     
         try {
-            const response = await fetch (`${apiUrl}register`, {
+            const response = await fetch (`https://mock-api.arikmpt.com/api/user/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
