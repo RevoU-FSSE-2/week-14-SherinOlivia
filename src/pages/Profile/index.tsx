@@ -6,7 +6,6 @@ import { AuthContext } from '../../provider/AppProvider';
 const Profile = () => {
   const {user, setUser } = useContext(AuthContext)
   const navigate = useNavigate()
-  const apiUrl = import.meta.env.VITE_REACT_APP_BASE_USER_URL;
   const token = localStorage.getItem('authToken')
 
   const getProfile = useCallback(
@@ -18,7 +17,7 @@ const Profile = () => {
       }
 
       try {
-        const response = await fetch (`${apiUrl}profile`, {
+        const response = await fetch (`https://mock-api.arikmpt.com/api/user/profile`, {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',

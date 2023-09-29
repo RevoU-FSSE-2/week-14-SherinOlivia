@@ -15,7 +15,6 @@ const CategoryList: React.FC = () => {
   const [categories, setCategories] = useState<CategoryInfo[]>([]);
   const navigate = useNavigate();
   const token = localStorage.getItem('authToken');
-  const apiUrl = import.meta.env.VITE_REACT_APP_BASE_CATEGORY_URL;
 
 const handleLogOut = () => {
   localStorage.removeItem('authToken')
@@ -32,12 +31,13 @@ const getCategory = useCallback(
 
   console.log("Auth Token:", token);
   try {
-    const response = await fetch(apiUrl, {
+    const response = await fetch('https://mock-api.arikmpt.com/api/category/', {
       headers: {
         Authorization: `Bearer ${token}`
       },
     });
     const data = await response.json();
+    console.log(data)
     
     if (data && data.data) {
       const datas = data.data.map((category: { id: string; }) => ({
@@ -61,7 +61,7 @@ useEffect(() => {
   // remove/delete item
   const removeCategory = async (id: string) => {
     try {
-        const response = await fetch(`${apiUrl}${id}`, {
+        const response = await fetch(`https://mock-api.arikmpt.com/api/category/${id}`, {
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${localStorage.getItem('authToken')}`
