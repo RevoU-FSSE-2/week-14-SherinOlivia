@@ -99,3 +99,5 @@ describe('Test List of Category Component', () => {
       });
     });
 })
+
+// pnpm run test 'src/components/CategoryForm/CategoryForm.test.tsx'

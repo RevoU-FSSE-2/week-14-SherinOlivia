@@ -74,3 +74,5 @@ describe('Test Register Form', () => {
         });
     });
 })
+
+// pnpm run test 'src/components/Register/Register.test.tsx'

@@ -57,3 +57,5 @@ describe('Test List of Category Component', () => {
         });
     });
 })
+
+// pnpm run test 'src/components/CategoryList/CategoryList.test.tsx'

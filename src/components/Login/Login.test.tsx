@@ -54,3 +54,5 @@ describe('Test Login Form', () => {
         });
     });
 })
+
+// pnpm run test 'src/components/Login/Login.test.tsx'
